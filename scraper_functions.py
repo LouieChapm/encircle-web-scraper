@@ -19,10 +19,9 @@ def get_data_from_national(_write_mode,_width,_profile,_diameter):
     with open("data.csv", _write_mode, encoding="utf8", newline="") as f:
         thewriter = writer(f)
         
-        if _write_mode=="w":
+        if _write_mode=="w": # only do this the first times 
             header = ["Source", "Brand", "Pattern", "Size", "Seasonality", "Price"]
             thewriter.writerow(header)
-
 
         website="www.national.co.uk"
         for list in lists:  # todo: change these variable names
