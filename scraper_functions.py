@@ -1,6 +1,6 @@
 # Louie Chapman
 #
-# This file contains webscraping functions to make the main file more readable 
+# This file contains webscraping functions to read from national.co.uk
 
 
 from bs4 import BeautifulSoup
@@ -39,10 +39,7 @@ def get_data_from_national(_write_mode,_width,_profile,_diameter):
                     break
 
             info = [website,brand,title,size,seasonality,price]  # final output
-            thewriter.writerow(info)    
-            # add to the table
-            # eventually I'd like to save all the data into a single list and add it all at once
-            # but maybe I won't do that just yet :/
+            thewriter.writerow(info)    # add to table
 
     print("datapoints scraped: {}".format(len(lists)))
 
